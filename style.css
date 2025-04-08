@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #1a73e8;
+    margin-bottom: 30px;
+}
+
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover, .upload-area.dragover {
+    border-color: #1a73e8;
+    background: #f8f9fa;
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.upload-content img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.6;
+}
+
+.upload-content p {
+    color: #666;
+}
+
+.upload-content span {
+    color: #1a73e8;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.file-info {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.password-section {
+    margin-bottom: 20px;
+}
+
+.password-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.encrypt {
+    background: #1a73e8;
+    color: white;
+}
+
+.decrypt {
+    background: #34a853;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.progress {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #e1e1e1;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--progress, 0%);
+    background: #1a73e8;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: #666;
+    font-size: 14px;
+}

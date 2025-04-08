@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES-256 File Encryption</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AES-256 File Encryption</h1>
+        <div class="upload-area" id="dropZone">
+            <input type="file" id="fileInput" hidden>
+            <div class="upload-content">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NjY2NjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMjEgMTV2NGEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMnYtNE0xNyA4bC01LTUtNSA1TTEyIDN2MTIiLz48L3N2Zz4=" alt="upload">
+                <p>Drag & Drop files here or <span>Browse Files</span></p>
+            </div>
+        </div>
+
+        <div class="file-info" id="fileInfo" style="display: none;">
+            <p>Selected file: <span id="fileName">No file selected</span></p>
+        </div>
+
+        <div class="password-section">
+            <input type="password" id="password" placeholder="Enter password" class="password-input">
+            <div class="show-password">
+                <input type="checkbox" id="showPassword">
+                <label for="showPassword">Show password</label>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="encryptBtn" class="btn encrypt">Encrypt</button>
+            <button id="decryptBtn" class="btn decrypt">Decrypt</button>
+        </div>
+
+        <div class="progress" style="display: none;">
+            <div class="progress-bar"></div>
+            <div class="progress-text">Processing: <span>0%</span></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
